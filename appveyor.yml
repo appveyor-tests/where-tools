@@ -39,5 +39,6 @@ test_script:
 - npm install gulp -g
 - where gulp
 - where powershell
+- where yarn
 
 build: off
