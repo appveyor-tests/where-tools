@@ -1,4 +1,5 @@
 test_script:
+- ps: get-path
 - where git
 - where ssh
 - where hg
@@ -6,5 +7,37 @@ test_script:
 - where curl
 - where node
 - where npm
+- where mvn
+- where go
+- where cmake
+- where cpack
+- where sqlpackage
+- where sqlcmd
+- where msbuild
+- where vstest.console
+- where 7z
+- where dotnet
+- where erl
+- where git-lfs
+- where java
+- where clang
+- where webpicmd
+- where choco
+- where python
+- where pip
+- where ruby
+- where gem
+- where bundle
+- where nuget
+- where xunit.console
+- where chromedriver
+- where perl
+- where gitversion
+- where mspec
+- where nunit-console
+- where nunit3-console
+- npm install gulp -g
+- where gulp
+- where powershell
 
 build: off
