@@ -1,0 +1,10 @@
+test_script:
+- where git
+- where ssh
+- where hg
+- where svn
+- where curl
+- where node
+- where npm
+
+build: off
