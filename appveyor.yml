@@ -1,6 +1,7 @@
 test_script:
 - ps: get-path
 - where git
+- where git-lfs
 - where ssh
 - where hg
 - where svn
@@ -40,5 +41,6 @@ test_script:
 - where gulp
 - where powershell
 - where yarn
+- where aws
 
 build: off
