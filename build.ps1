@@ -1,3 +1,4 @@
+$ErrorActionPreference = "Stop"
 get-path
 cmd /c where blala
 cmd /c where git
