@@ -1,6 +1,6 @@
-$ErrorActionPreference = "Stop"
 get-path
 cmd /c where blala
+if($LastExitCode -ne 0) { $host.SetShouldExit($LastExitCode) }
 cmd /c where git
 cmd /c where git-lfs
 cmd /c where ssh
