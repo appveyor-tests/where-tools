@@ -1,4 +1,5 @@
 get-path
+cmd /c where blala
 cmd /c where git
 cmd /c where git-lfs
 cmd /c where ssh
