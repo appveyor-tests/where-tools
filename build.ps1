@@ -1,6 +1,5 @@
 get-path
 cmd /c where blala
-if($LastExitCode -ne 0) { $host.SetShouldExit($LastExitCode) }
 cmd /c where git
 cmd /c where git-lfs
 cmd /c where ssh
@@ -43,3 +42,4 @@ cmd /c where gulp
 cmd /c where powershell
 cmd /c where yarn
 cmd /c where aws
+if($LastExitCode -ne 0) { $host.SetShouldExit($LastExitCode) }
