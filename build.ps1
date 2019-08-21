@@ -18,7 +18,6 @@ $whereCommands = @(
 "cmd /c where vstest.console"
 "cmd /c where 7z"
 "cmd /c where dotnet"
-"cmd /c where dotnetdd"
 "cmd /c where erl"
 "cmd /c where git-lfs"
 "cmd /c where java"
