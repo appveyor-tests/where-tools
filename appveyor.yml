@@ -1,3 +1,5 @@
+init:
+- if ((Test-Path "${env:ProgramFiles(x86)}\Microsoft Visual Studio\2019\Community") -or (Test-Path "${env:ProgramFiles(x86)}\Microsoft Visual Studio\2019\Preview")) { $env:vs2019 = 'true'; }
 test_script:
 - ps: get-path
 - where git
@@ -34,7 +36,7 @@ test_script:
 - where chromedriver
 - where perl
 - where gitversion
-- where mspec
+- IF "%vs2019%"=="" where mspec
 - where nunit-console
 - where nunit3-console
 - npm install gulp -g
