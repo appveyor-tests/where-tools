@@ -4,7 +4,7 @@ init:
      (Test-Path "${env:ProgramFiles(x86)}\Microsoft Visual Studio\2019\Preview") -or
      (Test-Path "$env:ProgramFiles\Microsoft Visual Studio\2022\Community")) { $env:vs2019_2022 = 'true'; }
 test_script:
-#- ps: $blockRdp = $true; iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))
+- ps: $blockRdp = $true; iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))
 - ps: get-path
 - where git
 - where git-lfs
