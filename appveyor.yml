@@ -6,14 +6,15 @@ init:
      (Test-Path "${env:ProgramFiles(x86)}\Microsoft Visual Studio\2019\Preview") -or
      (Test-Path "$env:ProgramFiles\Microsoft Visual Studio\2022\Community")) { $env:vs2019_2022 = 'true'; }
 install:
-- ps: Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('https://gist.githubusercontent.com/OwenMcDonnell/fc2b9b38c8fe691b678e1f6e930b812e/raw/c98114aedbb196fe889017fea77b4cb9826b9cc5/install_dotnet_uninst_tool.ps1'))
+#- ps: Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('https://gist.githubusercontent.com/OwenMcDonnell/fc2b9b38c8fe691b678e1f6e930b812e/raw/c98114aedbb196fe889017fea77b4cb9826b9cc5/install_dotnet_uninst_tool.ps1'))
+- ps: Remove-Item -LiteralPath "C:\Program Files\dotnet\sdk\9.0.100\" -Force -Recurse
 
 test_script:
-- ps: $blockRdp = $true; iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))
-- ps: $env:path += ';C:\Program Files (x86)\dotnet-uninstall-tool\'
+#- ps: $blockRdp = $true; iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))
+#- ps: $env:path += ';C:\Program Files (x86)\dotnet-uninstall-tool\'
 - ps: dotnet --list-sdks
-- ps: dotnet-core-uninstall list
-- ps: dotnet-core-uninstall remove 9.0.100 --sdk --x64 --yes --force --verbosity q
+#- ps: dotnet-core-uninstall list
+#- ps: dotnet-core-uninstall remove 9.0.100 --sdk --x64 --yes --force --verbosity q
 
 - ps: get-path
 - where git
