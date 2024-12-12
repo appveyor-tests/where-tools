@@ -1,4 +1,4 @@
-image: Visual Studio 2022
+image: Previous Visual Studio 2022
 
 init:
 - ps: |
@@ -7,7 +7,9 @@ init:
      (Test-Path "$env:ProgramFiles\Microsoft Visual Studio\2022\Community")) { $env:vs2019_2022 = 'true'; }
 install:
 #- ps: Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('https://gist.githubusercontent.com/OwenMcDonnell/fc2b9b38c8fe691b678e1f6e930b812e/raw/c98114aedbb196fe889017fea77b4cb9826b9cc5/install_dotnet_uninst_tool.ps1'))
-- ps: Remove-Item -LiteralPath "C:\Program Files\dotnet\sdk\9.0.100\" -Force -Recurse
+#- ps: Remove-Item -LiteralPath "C:\Program Files\dotnet\sdk\9.0.100\" -Force -Recurse
+- ps: Invoke-WebRequest -Uri 'https://dot.net/v1/dotnet-install.ps1' -UseBasicParsing -OutFile "$env:temp\dotnet-install.ps1"
+- ps: & $env:temp\dotnet-install.ps1 -Architecture x64 -Version '9.0.100' -InstallDir "$env:ProgramFiles\dotnet"
 
 test_script:
 #- ps: $blockRdp = $true; iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))
