@@ -8,9 +8,9 @@ init:
 install:
 #- ps: Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('https://gist.githubusercontent.com/OwenMcDonnell/fc2b9b38c8fe691b678e1f6e930b812e/raw/c98114aedbb196fe889017fea77b4cb9826b9cc5/install_dotnet_uninst_tool.ps1'))
 #- ps: Remove-Item -LiteralPath "C:\Program Files\dotnet\sdk\9.0.100\" -Force -Recurse
-#- ps: |
-    #Invoke-WebRequest -Uri 'https://dot.net/v1/dotnet-install.ps1' -UseBasicParsing -OutFile "$env:temp\dotnet-install.ps1"
-    #& $env:temp\dotnet-install.ps1 -Architecture x64 -Version '9.0.100' -InstallDir "$env:ProgramFiles\dotnet"
+- ps: |
+    Invoke-WebRequest -Uri 'https://dot.net/v1/dotnet-install.ps1' -UseBasicParsing -OutFile "$env:temp\dotnet-install.ps1"
+    & $env:temp\dotnet-install.ps1 -Architecture x64 -Version '8.0.400' -InstallDir "$env:ProgramFiles\dotnet"
 - ps: dotnet --list-sdks
 - ps: dotnet workload install wasm-tools
 test_script:
