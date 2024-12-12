@@ -12,7 +12,7 @@ test_script:
 #- ps: $blockRdp = $true; iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))
 - ps: $env:path += ';C:\Program Files (x86)\dotnet-uninstall-tool\'
 - ps: dotnet --list-sdks
-- ps: dotnet-core-uninstall remove 9.0.100 --sdk --yes --verbosity q
+- ps: dotnet-core-uninstall remove 9.0 --sdk --yes --force --verbosity q
 
 - ps: get-path
 - where git
