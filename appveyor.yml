@@ -9,9 +9,9 @@ install:
 - ps: Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('https://gist.githubusercontent.com/OwenMcDonnell/fc2b9b38c8fe691b678e1f6e930b812e/raw/c1843c54e47d4d5a0f4d4a80f7a916eecb4eb66c/install_dotnet_uninst_tool.ps1'))
 
 test_script:
-- ps: $blockRdp = $true; iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))
+#- ps: $blockRdp = $true; iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))
 - ps: dotnet-core-uninstall remove 9.0.100 --sdk --yes --verbosity q
-
+- ps: dotnet --list-sdks
 - ps: get-path
 - where git
 - where git-lfs
