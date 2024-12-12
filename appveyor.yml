@@ -11,8 +11,10 @@ install:
 - ps: |
     Invoke-WebRequest -Uri 'https://dot.net/v1/dotnet-install.ps1' -UseBasicParsing -OutFile "$env:temp\dotnet-install.ps1"
     & $env:temp\dotnet-install.ps1 -Architecture x64 -Version '8.0.400' -InstallDir "$env:ProgramFiles\dotnet"
+
 - ps: dotnet --list-sdks
-- ps: dotnet workload install wasm-tools
+- ps: dotnet --version
+- ps: dotnet workload install wasm-tools-net8
 test_script:
 #- ps: $blockRdp = $true; iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))
 #- ps: $env:path += ';C:\Program Files (x86)\dotnet-uninstall-tool\'
