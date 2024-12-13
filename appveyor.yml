@@ -15,7 +15,7 @@ install:
 - ps: dotnet --list-sdks
 - ps: dotnet --version
 - ps: dotnet workload --version
-- ps: dotnet workload install wasm-tools-net8
+- ps: dotnet workload install wasm-tools --version 8.0.400-manifests.505a630c
 test_script:
 #- ps: $blockRdp = $true; iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))
 #- ps: $env:path += ';C:\Program Files (x86)\dotnet-uninstall-tool\'
