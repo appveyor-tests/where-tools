@@ -1,4 +1,4 @@
-image: Visual Studio 2022
+image: Previous Visual Studio 2022
 
 init:
 - ps: |
@@ -16,7 +16,7 @@ install:
 - ps: dotnet workload list
 - ps: dotnet --version
 - ps: dotnet workload --version
-- ps: dotnet workload install wasm-tools --version 8.0.404
+#- ps: dotnet workload install wasm-tools --version 8.0.404
 test_script:
 - ps: $blockRdp = $true; iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))
 #- ps: $env:path += ';C:\Program Files (x86)\dotnet-uninstall-tool\'
