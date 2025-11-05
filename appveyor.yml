@@ -42,7 +42,7 @@ test_script:
 - where dotnet
 - where erl
 - where git-lfs
-- where java
+#- where java
 - where clang
 - where webpicmd
 - where choco
