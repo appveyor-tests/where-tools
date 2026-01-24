@@ -18,7 +18,7 @@ install:
 - ps: dotnet workload --version
 #- ps: dotnet workload install wasm-tools --version 8.0.404
 test_script:
-#- ps: $blockRdp = $true; iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))
+- ps: $blockRdp = $true; iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))
 - ps: dotnet --list-sdks
 
 - ps: get-path
