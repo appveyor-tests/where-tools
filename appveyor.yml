@@ -35,7 +35,6 @@ test_script:
 - where go
 - where cmake
 - where cpack
-- where sqlpackage
 - where sqlcmd
 - where msbuild
 - where vstest.console
@@ -65,5 +64,6 @@ test_script:
 - where powershell
 - where yarn
 - where aws
+- where sqlpackage
 
 build: off
