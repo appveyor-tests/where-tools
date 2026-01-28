@@ -12,7 +12,6 @@ $whereCommands = @(
 "cmd /c where go"
 "cmd /c where cmake"
 "cmd /c where cpack"
-"cmd /c where sqlpackage"
 "cmd /c where sqlcmd"
 "cmd /c where msbuild"
 "cmd /c where vstest.console"
@@ -41,7 +40,8 @@ $whereCommands = @(
 "cmd /c where gulp"
 "cmd /c where powershell"
 "cmd /c where yarn"
-"cmd /c where aws")
+"cmd /c where aws"
+"cmd /c where sqlpackage")
 foreach ($Command in $whereCommands) {$Command; Invoke-Expression $Command ; if($LastExitCode -ne 0) { $host.SetShouldExit($LastExitCode) }}
 
 
