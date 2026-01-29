@@ -44,7 +44,6 @@ test_script:
 - where git-lfs
 #- where java
 - where clang
-- where webpicmd
 - where choco
 - where python
 - where pip
@@ -65,5 +64,6 @@ test_script:
 - where yarn
 - where aws
 - where erl
+- where webpicmd
 
 build: off
