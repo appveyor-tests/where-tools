@@ -36,11 +36,11 @@ test_script:
 - where cmake
 - where cpack
 - where sqlcmd
+- where sqlpackage
 - where msbuild
 - where vstest.console
 - where 7z
 - where dotnet
-- where erl
 - where git-lfs
 #- where java
 - where clang
@@ -64,6 +64,6 @@ test_script:
 - where powershell
 - where yarn
 - where aws
-- where sqlpackage
+- where erl
 
 build: off
