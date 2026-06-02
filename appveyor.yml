@@ -54,7 +54,7 @@ test_script:
 - where xunit.console
 - where chromedriver
 - where perl
-- where gitversion
+#- where gitversion
 - IF "%vs2019_2022%"=="" where mspec
 - where nunit-console
 - where nunit3-console
