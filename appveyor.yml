@@ -63,7 +63,7 @@ test_script:
 - where powershell
 - where yarn
 - where aws
-- where erl
+#- where erl
 - where webpicmd
 
 build: off
