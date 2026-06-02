@@ -64,6 +64,6 @@ test_script:
 - where yarn
 - where aws
 #- where erl
-- where webpicmd
+#- where webpicmd
 
 build: off
