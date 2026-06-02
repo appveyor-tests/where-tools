@@ -55,8 +55,8 @@ test_script:
 - where chromedriver
 - where perl
 #- where gitversion
-- IF "%vs2019_2022%"=="" where mspec
-- where nunit-console
+#- IF "%vs2019_2022%"=="" where mspec
+#- where nunit-console
 - where nunit3-console
 - npm install gulp -g
 - where gulp
